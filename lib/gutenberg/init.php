@@ -44,6 +44,45 @@ function genesis_sample_block_editor_styles() {
 
 }
 
+add_filter( 'body_class', 'genesis_sample_blocks_body_classes' );
+/**
+ * Adds body classes to help with block styling.
+ *
+ * - `has-no-blocks` if content contains no blocks.
+ * - `first-block-[block-name]` to allow changes based on the first block (such as removing padding above a Cover block).
+ * - `first-block-align-[alignment]` to allow styling adjustment if the first block is wide or full-width.
+ *
+ * @since 2.8.0
+ *
+ * @param array $classes The original classes.
+ * @return array The modified classes.
+ */
+function genesis_sample_blocks_body_classes( $classes ) {
+
+	if ( ! is_singular() || ! function_exists( 'has_blocks' ) || ! function_exists( 'parse_blocks') ) {
+		return $classes;
+	}
+
+	if ( ! has_blocks() ) {
+		$classes[] = 'has-no-blocks';
+		return $classes;
+	}
+
+	$post_object = get_post( get_the_ID() );
+	$blocks      = (array) parse_blocks( $post_object->post_content );
+
+	if ( isset( $blocks[0]['blockName'] ) ) {
+		$classes[] = 'first-block-' . str_replace( '/', '-', $blocks[0]['blockName'] );
+	}
+
+	if ( isset( $blocks[0]['attrs']['align'] ) ) {
+		$classes[] = 'first-block-align-' . $blocks[0]['attrs']['align'];
+	}
+
+	return $classes;
+
+}
+
 // Add support for editor styles.
 add_theme_support( 'editor-styles' );
 
@@ -59,118 +98,13 @@ add_theme_support( 'responsive-embeds' );
 // Adds support for editor font sizes.
 add_theme_support(
 	'editor-font-sizes',
-	array(
-		array(
-			'name'      => __( 'Tiny', 'setup-2721' ),
-			'shortName' => __( 'T', 'setup-2721' ),
-			'size'      => 12,
-			'slug'      => 'tiny',
-		),
-		array(
-			'name'      => __( 'XXXSmall', 'setup-2721' ),
-			'shortName' => __( 'XXXS', 'setup-2721' ),
-			'size'      => 14,
-			'slug'      => 'xxxsmall',
-		),
-		array(
-			'name'      => __( 'XXSmall', 'setup-2721' ),
-			'shortName' => __( 'XXS', 'setup-2721' ),
-			'size'      => 16,
-			'slug'      => 'xxsmall',
-		),
-		array(
-			'name'      => __( 'XSmall', 'setup-2721' ),
-			'shortName' => __( 'XS', 'setup-2721' ),
-			'size'      => 20,
-			'slug'      => 'xsmall',
-		),
-		array(
-			'name'      => __( 'Small', 'setup-2721' ),
-			'shortName' => __( 'S', 'setup-2721' ),
-			'size'      => 24,
-			'slug'      => 'small',
-		),
-		array(
-			'name'      => __( 'Medium', 'setup-2721' ),
-			'shortName' => __( 'M', 'setup-2721' ),
-			'size'      => 34,
-			'slug'      => 'medium',
-		),
-		array(
-			'name'      => __( 'Large', 'setup-2721' ),
-			'shortName' => __( 'L', 'setup-2721' ),
-			'size'      => 48,
-			'slug'      => 'large',
-		),
-		array(
-			'name'      => __( 'XLarge', 'setup-2721' ),
-			'shortName' => __( 'XL', 'setup-2721' ),
-			'size'      => 64,
-			'slug'      => 'xlarge',
-		),
-	)
+	genesis_get_config( 'editor-font-sizes' )
 );
 
 // Adds support for editor color palette.
 add_theme_support(
 	'editor-color-palette',
-	array(
-		array(
-			'name'  => __( 'White', 'setup-2721' ),
-			'slug'  => 'white',
-			'color' => '#ffffff',
-		),
-		array(
-			'name'  => __( 'Light gray', 'setup-2721' ),
-			'slug'  => 'light-gray',
-			'color' => '#f5f5f5',
-		),
-		array(
-			'name'  => __( 'Medium gray', 'setup-2721' ),
-			'slug'  => 'medium-gray',
-			'color' => '#999',
-		),
-		array(
-			'name'  => __( 'Dark gray', 'setup-2721' ),
-			'slug'  => 'dark-gray',
-			'color' => '#333',
-		),
-		array(
-			'name'  => __( 'Black', 'setup-2721' ),
-			'slug'  => 'black',
-			'color' => '#000000',
-		),
-		array(
-			'name'  => __( 'Red', 'setup-2721' ),
-			'slug'  => 'red',
-			'color' => '#cc0000',
-		),
-		array(
-			'name'  => __( 'Orange', 'setup-2721' ),
-			'slug'  => 'orange',
-			'color' => '#ff7b00',
-		),
-		array(
-			'name'  => __( 'Yellow', 'setup-2721' ),
-			'slug'  => 'yellow',
-			'color' => '#ffbb00',
-		),
-		array(
-			'name'  => __( 'Green', 'setup-2721' ),
-			'slug'  => 'green',
-			'color' => '#66cc00',
-		),
-		array(
-			'name'  => __( 'Violet', 'setup-2721' ),
-			'slug'  => 'violet',
-			'color' => '#b882ee',
-		),
-		array(
-			'name'  => __( 'Blue', 'setup-2721' ),
-			'slug'  => 'blue',
-			'color' => '#0066cc',
-		),
-	)
+	genesis_get_config( 'editor-color-palette' )
 );
 
 add_action( 'after_setup_theme', 'genesis_sample_content_width', 0 );
