@@ -1,6 +1,8 @@
-/* SETUP | SETUP-2801 | STYLE - 2019-01-24 5:46 AM */
+/* SETUP | SETUP-2811 | STYLE - 2019-02-21 6:28 PM */
+// 2.8.1.1
 // 2.8.0.1 A (Latest Commit)
 // GENESIS-SAMPLE 2.8.0
+// SETUP | SETUP-2801 | STYLE - 2019-02-12 4:46 AM
 // SETUP | SETUP-2721 | STYLE - 2018-01-06 12:30 PM
 // GENESIS-SAMPLE 2.7.1
 
@@ -17,7 +19,7 @@
 @import 	"selector/2721_setup/boxsizing";
 @import 	"selector/2721_setup/clear";
 
-// -------------------------------------------------------------------- VARIABLES | 2019-01-01
+// -------------------------------------------------------------------- VARIABLES | 2019-02-12
 
 // WIDTH
 @import 	"variables/2721_setup/width-grid";
@@ -32,7 +34,7 @@
 @import 	"variables/2721_setup/fontweight";
 @import 	"variables/2721_setup/lineheight";
 @import 	"variables/2721_setup/letterspacing";
-@import 	"variables/2721_setup/color";
+@import 	"variables/2811_setup/color";
 
 // -------------------------------------------------------------------- COLOR | 2018-12-14
 @import 	"color/2721_setup/color";
@@ -44,15 +46,15 @@
 @import 	"genesis/genesis-sample-271/typographical-elements";		// GENESIS-SAMPLE 2.7.1
 
 
-// -------------------------------------------------------------------- CONTENT | 2018-12-14
+// -------------------------------------------------------------------- CONTENT | 2019-02-11
 @import 	"content/2721_setup/link";
 @import 	"content/2721_setup/body";
 @import 	"content/2721_setup/headline";
 @import 	"content/2721_setup/paragraph";
 @import 	"content/2721_setup/list";
 @import 	"content/2721_setup/title";
-@import 	"content/2721_setup/align";
-@import 	"content/2721_setup/button";
+@import 	"content/2811_setup/align";
+@import 	"content/2811_setup/button";
 @import 	"content/2721_setup/block";
 
 // -------------------------------------------------------------------- TYPE | 2018-12-14
@@ -125,21 +127,21 @@
 --------------------------------------------- */
 
 .avatar {
-	border-radius: 50%;
-	float: left;
+	//border-radius: 50%;
+	//float: left;
 }
 
 .author-box .avatar,
 .alignleft .avatar {
-	margin-right: 20px;
+	//margin-right: 20px;
 }
 
 .alignright .avatar {
-	margin-left: 20px;
+	//margin-left: 20px;
 }
 
 .comment .avatar {
-	margin: 0 15px 20px 0;
+	//margin: 0 15px 20px 0;
 }
 
 /* Genesis
@@ -347,19 +349,19 @@ img.alignright,
 --------------------------------------------- */
 
 .featured-content .entry {
-	border-bottom: 1px solid #eee;
-	margin-bottom: 20px;
+	//border-bottom: 1px solid #eee;
+	//margin-bottom: 20px;
 }
 
 .featured-content .entry:last-of-type {
-	border-bottom: none;
-	margin-bottom: 0;
+	//border-bottom: none;
+	//margin-bottom: 0;
 }
 
 .featured-content .entry-title {
-	font-size: 16px;
-	margin-bottom: 5px;
-	margin-top: 10px;
+	//font-size: 16px;
+	//margin-bottom: 5px;
+	//margin-top: 10px;
 }
 
 
@@ -702,7 +704,7 @@ img.alignright,
 --------------------------------------------- */
 
 .entry {
-	margin-bottom: 40px;
+	//margin-bottom: 40px;
 }
 
 .entry-content ol,
@@ -742,22 +744,22 @@ img.alignright,
 --------------------------------------------- */
 
 p.entry-meta {
-	font-size: 16px;
-	margin-bottom: 0;
+	//font-size: 16px;
+	//margin-bottom: 0;
 }
 
 .entry-header .entry-meta {
-	margin-bottom: 20px;
+	//margin-bottom: 20px;
 }
 
 .entry-footer .entry-meta {
-	border-top: 1px solid #eee;
-	padding-top: 20px;
+	//border-top: 1px solid #eee;
+	//padding-top: 20px;
 }
 
 .entry-categories,
 .entry-tags {
-	display: block;
+	//display: block;
 }
 
 .entry-comments-link::before {
@@ -915,8 +917,9 @@ p.entry-meta {
 // -------------------------------------------------------------------- HEADER | 2018-12-14
 @import 	"header/2721_setup/header-logomenuv_grid";
 
-// -------------------------------------------------------------------- SECTION | 2018-12-14
+// -------------------------------------------------------------------- SECTION | 2019-02-08
 //@import 	"section/2721_setup/section-header_grid";
+@import 	"section/2811_setup/section-fullscreen";
 
 // -------------------------------------------------------------------- INNER | 2018-12-14
 @import 	"inner/2721_setup/inner_grid";
@@ -932,6 +935,15 @@ p.entry-meta {
 // -------------------------------------------------------------------- CREDIT | 2018-12-14
 @import 	"credit/2721_setup/credit-swp_grid";
 
+// -------------------------------------------------------------------- LOOP | 2019-02-05
+@import 	"loop/2801_setup/entry";
+@import 	"loop/2801_setup/entrytitle";
+@import 	"loop/2801_setup/entrymeta";
+@import 	"loop/2801_setup/entryimage";
+@import 	"loop/2801_setup/authorbox";
+@import 	"loop/2801_setup/avatar";
+@import 	"loop/2801_setup/comments";
+
 // -------------------------------------------------------------------- GUI | 2018-12-14
 @import 	"gui/2721_setup/flex";
 @import 	"gui/2721_setup/outerinner_grid";
@@ -943,13 +955,14 @@ p.entry-meta {
 @import 	"genesis/genesis-sample-271/print-styles";		// GENESIS-SAMPLE 2.7.1
 
 
-// -------------------------------------------------------------------- GUTENBERG | 2019-01-23
+// -------------------------------------------------------------------- GUTENBERG | 2019-02-12
 @import 	"gutenberg/2721_setup/typography";
 @import 	"gutenberg/2721_setup/columns";
 @import 	"gutenberg/2721_setup/images";
 @import 	"gutenberg/2721_setup/blockquotes";
-@import 	"gutenberg/2721_setup/uncategorized";
-@import 	"gutenberg/2721_setup/styleeditor";
+@import 	"gutenberg/2811_setup/buttons";
+@import 	"gutenberg/2811_setup/uncategorized";
+@import 	"gutenberg/2811_setup/styleeditor";
 
 // -------------------------------------------------------------------- GUIDE | 2019-01-21
 @import 	"guide/2721_setup/label";

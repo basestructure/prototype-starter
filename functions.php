@@ -105,6 +105,12 @@ add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
 // Renames primary and secondary navigation menus.
 add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
 
+//* Display author box on single posts
+//add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+
+// Add support for post formats
+add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
+
 // Adds image sizes.
 add_image_size( 'sidebar-featured', 75, 75, true );
 

@@ -1,12 +1,12 @@
-/* SETUP | SETUP-2801 | STYLE - 2019-01-24 5:46 AM */
+/* SETUP | SETUP-2811 | STYLE - 2019-02-21 6:28 PM */
 /*
-Theme Name: SETUP-2801
-Theme URI: https://setup-2721.basestructure.com/
+Theme Name: SETUP-2811
+Theme URI: https://setup-2811.basestructure.com/
 Description: This is the prototype theme created by Mark Corpuz.
 Author: Mark Corpuz
 Author URI: https://markcorpuz.com/
 
-Version: 2.8.0.1
+Version: 2.8.1.1
 
 Tags: accessibility-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
 
@@ -15,7 +15,7 @@ Template: genesis
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Text Domain: setup-2721
+Text Domain: setup-2811
 */
 /* SETUP | WP | 2721_SETUP | NORMALIZE - 2019-01-01 */
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -192,12 +192,12 @@ summary {
 /* SETUP | VARIABLES | 2721_SETUP | WIDTH-RANGE - 2018-12-14 */
 /* SETUP | VARIABLES | 2721_SETUP | WIDTH-SPACE - 2018-12-14 */
 /* SETUP | VARIABLES | 2721_SETUP | RESPONSIVE-RANGE - 2018-12-14 */
-/* SETUP | VARIABLES | 2721_SETUP | FONTFAMILY - 2018-12-14 */
+/* SETUP | VARIABLES | 2721_SETUP | FONTFAMILY - 2019-01-30 */
 /* SETUP | VARIABLES | 2721_SETUP | FONTSIZE - 2019-01-01 */
 /* SETUP | VARIABLES | 2721_SETUP | FONTWEIGHT - 2018-12-14 */
 /* SETUP | VARIABLES | 2721_SETUP | LINEHEIGHT - 2018-12-14 */
 /* SETUP | VARIABLES | 2721_SETUP | LETTERSPACING - 2018-12-14 */
-/* SETUP | VARIABLES | 2721_SETUP | COLOR - 2018-12-14 */
+/* SETUP | VARIABLES | 2811_SETUP | COLOR - 2019-02-12 */
 /* SETUP | COLOR | 2721_SETUP | COLOR - 2018-12-14 */
 .color-white, .entry-content .has-white-color {
   color: #ffffff; }
@@ -601,7 +601,7 @@ p {
   margin-top: 0;
   margin-bottom: 1.5rem; }
 
-/* SETUP | LIST | 2721_SETUP | LIST - 2018-12-14 */
+/* SETUP | LIST | 2721_SETUP | LIST - 2019-01-30 */
 li {
   list-style-type: none; }
 
@@ -674,7 +674,7 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
 .archive-title {
   font-size: 2.125rem; }
 
-/* SETUP | SELECTOR | 2721_SETUP | ALIGN - 2019-01-01 */
+/* SETUP | SELECTOR | 2811_SETUP | ALIGN - 2019-02-08 */
 .alignleft, img.alignleft {
   float: left; }
 
@@ -685,12 +685,16 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
   margin-right: auto;
   margin-left: auto; }
 
-@media only screen and (min-width: 64rem) {
-  .alignfull {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    width: auto;
-    max-width: 1000%; } }
+img.alignleft, .featured-content a.alignleft .entry-image {
+  margin-right: 1.5rem; }
+
+img.alignright, .featured-content a.alignright .entry-image {
+  margin-left: 1.5rem; }
+
+.alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw; }
 
 .full-width-content .entry-content .alignfull {
   margin-left: calc(-100vw / 2 + 100% / 2);
@@ -698,6 +702,8 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
   max-width: 100vw; }
 
 .content-sidebar .entry-content .alignfull, .sidebar-content .entry-content .alignfull {
+  margin-right: 0;
+  margin-left: 0;
   width: 100%; }
 
 @media only screen and (min-width: 64rem) {
@@ -706,37 +712,78 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
     margin-right: -128px;
     min-width: 64rem; } }
 
+@media only screen and (max-width: 63.9375rem) {
+  .alignwide {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; } }
+
+@media only screen and (min-width: 64rem) {
+  .content-sidebar .alignwide {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-width: auto;
+    max-width: 48rem; } }
+
+@media only screen and (max-width: 63.9375rem) {
+  .content-sidebar .alignwide {
+    max-width: 48rem; } }
+
 @media only screen and (min-width: 64rem) {
   .alignwide.width-med {
-    margin-left: 0;
-    margin-right: 0;
-    min-width: 48rem; } }
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 48rem;
+    max-width: 48rem; } }
+
+@media only screen and (max-width: 63.9375rem) {
+  .alignwide.width-med {
+    max-width: 48rem; } }
+
+@media only screen and (max-width: 64rem) {
+  .content-sidebar .alignwide.width-med {
+    min-width: auto;
+    max-width: 48rem; } }
 
 @media only screen and (min-width: 64rem) {
   .alignwide.width-sml {
-    margin-left: 128px;
-    margin-right: 128px;
-    min-width: 32rem; } }
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 32rem;
+    max-width: 32rem; } }
 
 @media only screen and (max-width: 63.9375rem) {
   .alignwide.width-sml {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    width: auto;
-    max-width: 1000%; } }
+    max-width: 32rem; } }
+
+@media only screen and (max-width: 64rem) {
+  .content-sidebar .alignwide.width-sml {
+    min-width: auto;
+    max-width: 32rem; } }
 
 @media only screen and (min-width: 64rem) {
   .alignwide.width-xsml {
-    margin-left: 171px;
-    margin-right: 172px;
-    min-width: 26.563rem; } }
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 26.563rem;
+    max-width: 26.563rem; } }
+
+@media only screen and (max-width: 63.9375rem) {
+  .alignwide.width-xsml {
+    max-width: 26.563rem; } }
+
+@media only screen and (max-width: 64rem) {
+  .content-sidebar .alignwide.width-xsml {
+    min-width: auto;
+    max-width: 26.563rem; } }
 
 @media only screen and (min-width: 64rem) {
   .alignfull img, .alignwide img {
     display: block;
     margin: 0 auto; } }
 
-.alignnone, .img.alignnone {
+.alignnone, img.alignnone {
   float: none; }
 
 .aligncenter, img.aligncenter {
@@ -754,23 +801,25 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
 .textjustify {
   text-align: justify; }
 
-/* SETUP | CONTENT | 2721_SETUP | BUTTON - 2018-12-14 */
+/* SETUP | CONTENT | 2811_SETUP | BUTTON - 2019-02-11 */
 .button,
 a.button, .button:link,
 a.button:link, .button:active,
 a.button:active, .button:hover,
-a.button:hover, button, input[type="button"], input[type="reset"], input[type="submit"] {
+a.button:hover, button, input[type="button"], input[type="reset"], input[type="submit"], .content .wp-block-button .wp-block-button__link, .content .wp-block-button .wp-block-button__link:focus,
+.content .wp-block-button .wp-block-button__link:hover {
   color: #fff;
   background-color: #147FC4;
   border: 0;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  width: auto; }
+  width: auto;
+  font-weight: 600; }
 
 .button,
 a.button, .button.button-alt,
-a.button.button-alt {
+a.button.button-alt, .content .wp-block-button .wp-block-button__link {
   display: inline-block; }
 
 .button:link,
@@ -780,9 +829,10 @@ a.button:link {
   text-decoration: none; }
 
 .button:hover,
-a.button:hover, button:hover, input:hover[type="button"], input:hover[type="reset"], input:hover[type="submit"] {
-  color: #eee;
-  background-color: #0d527f;
+a.button:hover, button:hover, input:hover[type="button"], input:hover[type="reset"], input:hover[type="submit"], .content .wp-block-button .wp-block-button__link:focus,
+.content .wp-block-button .wp-block-button__link:hover {
+  color: #147FC4;
+  background-color: #eee;
   text-decoration: none; }
 
 .button.button-alt,
@@ -791,55 +841,128 @@ a.button.button-alt:link, .button.button-alt:active,
 a.button.button-alt:active, .button.button-alt:hover,
 a.button.button-alt:hover, button.button-alt {
   color: #147FC4;
-  background-color: #fff;
+  background-color: #eee;
   border: 0;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  width: auto; }
+  width: auto;
+  font-weight: 600; }
 
 .button.button-alt:link,
 a.button.button-alt:link {
   color: #147FC4;
-  background-color: #fff;
+  background-color: #eee;
   text-decoration: none; }
 
 .button.button-alt:hover,
 a.button.button-alt:hover, button.button-alt:hover {
-  color: #fff;
+  color: #eee;
   background-color: #147FC4;
   text-decoration: none; }
 
-.button {
-  padding: 1rem 2rem; }
+.button.button-wide,
+a.button.button-wide {
+  display: block; }
+
+.button.button-round,
+a.button.button-round, .content .wp-block-button .wp-block-button__link {
+  border-radius: 0.5rem; }
+
+.button, .content .wp-block-button .wp-block-button__link, .content .wp-block-button .wp-block-button__link:focus,
+.content .wp-block-button .wp-block-button__link:hover, .content .wp-block-button.button .wp-block-button__link {
+  padding: 1rem 1.5rem; }
 
 .button-tiny,
-.button-tiny.button {
-  padding: 0.0625rem; }
+.button-tiny.button, .content .wp-block-button.button-tiny .wp-block-button__link {
+  padding: 0.0625rem 0.3125rem; }
+
+.button-xxxsml,
+.button-xxxsml.button, .content .wp-block-button.button-xxxsml .wp-block-button__link {
+  padding: 0.125rem 0.5rem; }
+
+.button-xxsml,
+.button-xxsml.button, .content .wp-block-button.button-xxsml .wp-block-button__link {
+  padding: 0.25rem 0.5rem; }
 
 .button-xsml,
-.button-xsml.button {
-  padding: 0.3125rem; }
+.button-xsml.button, .content .wp-block-button.button-xsml .wp-block-button__link {
+  padding: 0.3125rem 1.5rem; }
 
 .button-sml,
-.button-sml.button {
-  padding: 0.5rem; }
+.button-sml.button, .content .wp-block-button.button-sml .wp-block-button__link {
+  padding: 0.5rem 1.5rem; }
 
 .button-med,
-.button-med.button {
-  padding: 1.5rem; }
+.button-med.button, .content .wp-block-button.button-med .wp-block-button__link {
+  padding: 1rem 1.5rem; }
 
 .button-lrg,
-.button-lrg.button {
-  padding: 2rem; }
+.button-lrg.button, .content .wp-block-button.button-lrg .wp-block-button__link {
+  padding: 1.5rem 3rem; }
 
 .button-xlrg,
-.button-xlrg.button {
-  padding: 3rem; }
+.button-xlrg.button, .content .wp-block-button.button-xlrg .wp-block-button__link {
+  padding: 2rem 4rem; }
 
 .button-huge,
-.button-huge.button {
-  padding: 8rem; }
+.button-huge.button, .content .wp-block-button.button-huge .wp-block-button__link {
+  padding: 3rem 8rem; }
+
+.button.button-black,
+a.button.button-black, .button.button-black:link,
+a.button.button-black:link {
+  color: #ffffff;
+  background-color: #000000; }
+
+.button-black:hover,
+a.button-black:hover {
+  color: #000000;
+  background-color: #f5f5f5; }
+
+.button.button-dark,
+a.button.button-dark, .button.button-dark:link,
+a.button.button-dark:link {
+  color: #f5f5f5;
+  background-color: #333333; }
+
+.button-dark:hover,
+a.button-dark:hover {
+  color: #333333;
+  background-color: #f5f5f5; }
+
+.button.button-middle,
+a.button.button-middle, .button.button-middle:link,
+a.button.button-middle:link {
+  color: #f5f5f5;
+  background-color: #666666; }
+
+.button-middle:hover,
+a.button-middle:hover {
+  color: #666666;
+  background-color: #f5f5f5; }
+
+.button.button-light,
+a.button.button-light, .button.button-light:link,
+a.button.button-light:link {
+  color: #333333;
+  background-color: #f5f5f5; }
+
+.button-light:hover,
+a.button-light:hover {
+  color: #f5f5f5;
+  background-color: #333333; }
+
+.button.button-red,
+a.button.button-red, .button.button-red:link,
+a.button.button-red:link {
+  color: #ffffff;
+  background-color: #cc0000; }
+
+.button-red:hover,
+a.button-red:hover {
+  color: #cc0000;
+  background-color: #f5f5f5; }
 
 /* SETUP | CONTENT | 2721_SETUP | BLOCK - 2018-12-14 */
 .wp-block-cover.space-zero-bottom {
@@ -860,6 +983,9 @@ a.button.button-alt:hover, button.button-alt:hover {
 
 .fontfamily-headline {
   font-family: "Source Sans Pro", sans-serif; }
+
+.fontfamily-quote {
+  font-family: "Source Sans Pro", serif; }
 
 /* SETUP | TYPE | 2721_SETUP | SIZE - 2019-01-01 */
 .fontsize-default {
@@ -884,71 +1010,71 @@ dl, p.has-regular-font-size {
 .fontsize-caption {
   font-size: 0.75; }
 
-.fontsize-tiniest {
+.fontsize-tiniest, .content .wp-block-button.fontsize-tiniest .wp-block-button__link {
   font-size: 0.5rem; }
 
-.fontsize-tinier {
+.fontsize-tinier, .content .wp-block-button.fontsize-tinier .wp-block-button__link {
   font-size: 0.625rem; }
 
-.fontsize-tiny, .entry-content p.has-tiny-font-size, p.has-tiny-font-size {
+.fontsize-tiny, .entry-content p.has-tiny-font-size, .content .wp-block-button.fontsize-tiny .wp-block-button__link, p.has-tiny-font-size {
   font-size: 0.75rem;
   line-height: 1.4; }
 
-.fontsize-xxxsml, .entry-content p.has-xxxsmall-font-size, p.has-xxxsmall-font-size {
+.fontsize-xxxsml, .entry-content p.has-xxxsmall-font-size, .content .wp-block-button.fontsize-xxxsml .wp-block-button__link, p.has-xxxsmall-font-size {
   font-size: 0.875rem;
   line-height: 1.4; }
 
-.fontsize-xxsml, .entry-content p.has-xxsmall-font-size, p.has-xxsmall-font-size {
+.fontsize-xxsml, .entry-content p.has-xxsmall-font-size, .content .wp-block-button.fontsize-xxsml .wp-block-button__link, p.has-xxsmall-font-size {
   font-size: 1rem;
   line-height: 1.4; }
 
-.fontsize-xsml, .entry-content p.has-xsmall-font-size, p.has-xsmall-font-size {
+.fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link, p.has-xsmall-font-size {
   font-size: 1.25rem;
   line-height: 1.4; }
   @media only screen and (max-width: 48rem) {
-    .fontsize-xsml, .entry-content p.has-xsmall-font-size, p.has-xsmall-font-size {
+    .fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link, p.has-xsmall-font-size {
       font-size: 1.125rem; } }
   @media only screen and (max-width: 32rem) {
-    .fontsize-xsml, .entry-content p.has-xsmall-font-size, p.has-xsmall-font-size {
+    .fontsize-xsml, .entry-content p.has-xsmall-font-size, .content .wp-block-button.fontsize-xsml .wp-block-button__link, p.has-xsmall-font-size {
       font-size: 1rem; } }
 
-.fontsize-sml, .entry-content p.has-small-font-size, p.has-small-font-size {
+.fontsize-sml, .entry-content p.has-small-font-size, .content .wp-block-button.fontsize-sml .wp-block-button__link, p.has-small-font-size {
   font-size: 1.5rem; }
   @media only screen and (max-width: 48rem) {
-    .fontsize-sml, .entry-content p.has-small-font-size, p.has-small-font-size {
+    .fontsize-sml, .entry-content p.has-small-font-size, .content .wp-block-button.fontsize-sml .wp-block-button__link, p.has-small-font-size {
       font-size: 1.25rem; } }
   @media only screen and (max-width: 32rem) {
-    .fontsize-sml, .entry-content p.has-small-font-size, p.has-small-font-size {
+    .fontsize-sml, .entry-content p.has-small-font-size, .content .wp-block-button.fontsize-sml .wp-block-button__link, p.has-small-font-size {
       font-size: 1.125rem; } }
 
-.fontsize-med, .entry-content p.has-medium-font-size, p.has-medium-font-size {
+.fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link, p.has-medium-font-size {
   font-size: 2.25rem;
   line-height: 1.4; }
   @media only screen and (max-width: 48rem) {
-    .fontsize-med, .entry-content p.has-medium-font-size, p.has-medium-font-size {
+    .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link, p.has-medium-font-size {
       font-size: 1.5rem; } }
   @media only screen and (max-width: 32rem) {
-    .fontsize-med, .entry-content p.has-medium-font-size, p.has-medium-font-size {
+    .fontsize-med, .entry-content p.has-medium-font-size, .content .wp-block-button.fontsize-med .wp-block-button__link, p.has-medium-font-size {
       font-size: 1.25rem; } }
 
-.fontsize-lrg, .entry-content p.has-large-font-size, p.has-large-font-size {
+.fontsize-lrg, .entry-content p.has-large-font-size, .content .wp-block-button.fontsize-lrg .wp-block-button__link, p.has-large-font-size {
   font-size: 3rem;
   line-height: 1.2; }
   @media only screen and (max-width: 48rem) {
-    .fontsize-lrg, .entry-content p.has-large-font-size, p.has-large-font-size {
+    .fontsize-lrg, .entry-content p.has-large-font-size, .content .wp-block-button.fontsize-lrg .wp-block-button__link, p.has-large-font-size {
       font-size: 2.25rem; } }
   @media only screen and (max-width: 32rem) {
-    .fontsize-lrg, .entry-content p.has-large-font-size, p.has-large-font-size {
+    .fontsize-lrg, .entry-content p.has-large-font-size, .content .wp-block-button.fontsize-lrg .wp-block-button__link, p.has-large-font-size {
       font-size: 1.5rem; } }
 
-.fontsize-xlrg, .entry-content p.has-xlarge-font-size, p.has-xlarge-font-size {
+.fontsize-xlrg, .entry-content p.has-xlarge-font-size, .content .wp-block-button.fontsize-xlrg .wp-block-button__link, p.has-xlarge-font-size {
   font-size: 3.75rem;
   line-height: 1.2; }
   @media only screen and (max-width: 48rem) {
-    .fontsize-xlrg, .entry-content p.has-xlarge-font-size, p.has-xlarge-font-size {
+    .fontsize-xlrg, .entry-content p.has-xlarge-font-size, .content .wp-block-button.fontsize-xlrg .wp-block-button__link, p.has-xlarge-font-size {
       font-size: 3rem; } }
   @media only screen and (max-width: 32rem) {
-    .fontsize-xlrg, .entry-content p.has-xlarge-font-size, p.has-xlarge-font-size {
+    .fontsize-xlrg, .entry-content p.has-xlarge-font-size, .content .wp-block-button.fontsize-xlrg .wp-block-button__link, p.has-xlarge-font-size {
       font-size: 2.125rem; } }
 
 .fontsize-xxlrg {
@@ -971,30 +1097,40 @@ dl, p.has-regular-font-size {
     .fontsize-xxxlrg {
       font-size: 3.75rem; } }
 
-.fontsize-huge {
+.fontsize-huge, .content .wp-block-button.fontsize-huge .wp-block-button__link {
   font-size: 8rem;
   line-height: 1; }
   @media only screen and (max-width: 48rem) {
-    .fontsize-huge {
+    .fontsize-huge, .content .wp-block-button.fontsize-huge .wp-block-button__link {
       font-size: 6rem; } }
   @media only screen and (max-width: 32rem) {
-    .fontsize-huge {
+    .fontsize-huge, .content .wp-block-button.fontsize-huge .wp-block-button__link {
       font-size: 5rem; } }
 
 /* SETUP | TYPE | 2721_SETUP | WEIGHT - 2018-12-14 */
-.fontweight-extralight {
+.button.fontweight-extralight,
+.button.fontweight-extralight.button-alt:hover,
+a.button.fontweight-extralight.button-alt:hover, .fontweight-extralight {
   font-weight: 100; }
 
-.fontweight-light {
+.button.fontweight-light,
+.button.fontweight-light.button-alt:hover,
+a.button.fontweight-light.button-alt:hover, .fontweight-light {
   font-weight: 300; }
 
-.fontweight-regular {
+.button.fontweight-regular,
+.button.fontweight-regular.button-alt:hover,
+a.button.fontweight-regular.button-alt:hover, .fontweight-regular {
   font-weight: 400; }
 
-.fontweight-semibold {
+.button.fontweight-semibold,
+.button.fontweight-semibold.button-alt:hover,
+a.button.fontweight-semibold.button-alt:hover, .fontweight-semibold {
   font-weight: 600; }
 
-.fontweight-bold {
+.button.fontweight-bold,
+.button.fontweight-bold.button-alt:hover,
+a.button.fontweight-bold.button-alt:hover, .fontweight-bold {
   font-weight: 700; }
 
 .fontweight-black {
@@ -1129,7 +1265,9 @@ p.space-bottom, .space, .space-y, .space-bottom, .space-topless {
 .space-xhuge, .space-xhuge-y, .space-xhuge-bottom, .space-xhuge-topless {
   margin-bottom: 10rem; }
 
-p.space-zero-bottom, .space-zero, .space-zero-y, .space-zero-bottom, .entry-content .wp-block-columns.space-zero-bottom, .entry-content .wp-block-columns.space-zero-bottom-blockcolumn .wp-block-column, .entry-content .wp-block-columns.column-zero-bottom .wp-block-column {
+p.space-zero-bottom, ol.space-zero-bottom,
+.entry-content ol.space-zero-bottom, ul.space-zero-bottom,
+.entry-content ul.space-zero-bottom, .space-zero, .space-zero-y, .space-zero-bottom, .entry-content .wp-block-columns.space-zero-bottom, .entry-content .wp-block-columns.space-zero-bottom-blockcolumn .wp-block-column, .entry-content .wp-block-columns.column-zero-bottom .wp-block-column {
   margin-bottom: 0; }
 
 p.space-left, .space, .space-x, .space-left, .space-topless, .space-bottomless {
@@ -3266,20 +3404,6 @@ th:first-child {
 ---------------------------------------------------------------------------- */
 /* Avatar
 --------------------------------------------- */
-.avatar {
-  border-radius: 50%;
-  float: left; }
-
-.author-box .avatar,
-.alignleft .avatar {
-  margin-right: 20px; }
-
-.alignright .avatar {
-  margin-left: 20px; }
-
-.comment .avatar {
-  margin: 0 15px 20px 0; }
-
 /* Genesis
 --------------------------------------------- */
 .after-entry,
@@ -3432,19 +3556,6 @@ img.alignright,
 
 /* Featured Content
 --------------------------------------------- */
-.featured-content .entry {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 20px; }
-
-.featured-content .entry:last-of-type {
-  border-bottom: none;
-  margin-bottom: 0; }
-
-.featured-content .entry-title {
-  font-size: 16px;
-  margin-bottom: 5px;
-  margin-top: 10px; }
-
 /* Plugins
 ---------------------------------------------------------------------------- */
 /* Genesis eNews Extended
@@ -3529,9 +3640,6 @@ img.alignright,
 ---------------------------------------------------------------------------- */
 /* Entry Content
 --------------------------------------------- */
-.entry {
-  margin-bottom: 40px; }
-
 .entry-content code {
   background-color: #f5f5f5; }
 
@@ -3541,21 +3649,6 @@ img.alignright,
 
 /* Entry Meta
 --------------------------------------------- */
-p.entry-meta {
-  font-size: 16px;
-  margin-bottom: 0; }
-
-.entry-header .entry-meta {
-  margin-bottom: 20px; }
-
-.entry-footer .entry-meta {
-  border-top: 1px solid #eee;
-  padding-top: 20px; }
-
-.entry-categories,
-.entry-tags {
-  display: block; }
-
 .entry-comments-link::before {
   content: "\2014";
   margin: 0 6px 0 2px; }
@@ -3773,6 +3866,13 @@ p.entry-meta {
       -ms-grid-column: 2;
       -ms-grid-row: 3;
       margin-bottom: 0; } }
+
+/* SETUP | SECTION | 2811_SETUP | SECTION-FULLSCREEN - 2019-02-08 */
+.section-fullscreen {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+  min-height: 100vh; }
 
 /* SETUP | INNER | 2721_SETUP | INNER_GRID - 2018-12-14 */
 .site-inner {
@@ -4068,6 +4168,96 @@ p.entry-meta {
 
 .siteby a:hover {
   text-decoration: none; }
+
+/* SETUP | LOOP | 2801_SETUP | ENTRY - 2019-02-04 */
+.single .content .entry {
+  margin-bottom: 3rem; }
+
+.archive .entry {
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  margin-bottom: 2rem; }
+
+.featured-content .entry {
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  margin-bottom: 1rem; }
+
+/* SETUP | LOOP | 2801_SETUP | ENTRYTITLE - 2019-02-03 */
+.featured-content .entry-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem; }
+
+/* SETUP | LOOP | 2801_SETUP | ENTRYMETA - 2019-02-04 */
+.entry-meta {
+  font-size: 0.875rem; }
+
+.featured-content .entry-meta {
+  font-size: 0.875rem; }
+
+.more-from-category {
+  font-size: 1rem;
+  text-align: right; }
+
+.more-from-category a {
+  padding: 0.25rem 0.5rem;
+  background-color: #f3f3f3; }
+
+.entry-footer .entry-meta {
+  margin-bottom: 0; }
+
+/* SETUP | LOOP | 2801_SETUP | ENTRYIMAGE - 2019-02-04 */
+@media only screen and (max-width: 32rem) {
+  .entry-image.alignleft,
+  img.entry-image.alignleft {
+    float: none;
+    margin-right: 0; } }
+
+@media only screen and (max-width: 32rem) {
+  .entry-image.alignright,
+  img.entry-image.alignright {
+    float: none;
+    margin-left: 0; } }
+
+/* SETUP | LOOP | 2801_SETUP | AUTHORBOX - 2019-02-05 */
+.author-box {
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  margin-bottom: 2rem; }
+
+.author-box-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem; }
+
+/* SETUP | LOOP | 2801_SETUP | AVATAR - 2019-02-05 */
+.avatar {
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.5rem; }
+
+/* SETUP | LOOP | 2801_SETUP | COMMENTS - 2019-02-05 */
+.entry-comments {
+  margin-bottom: 3rem; }
+
+.entry-comments h3 {
+  font-size: 2.25rem;
+  margin-bottom: 0; }
+
+.comment-respond {
+  margin-bottom: 3rem; }
+
+.comment-reply-title {
+  font-size: 2.25rem;
+  margin-bottom: 0; }
+
+.comment-author {
+  font-size: 1.25rem; }
+
+.comment-meta {
+  font-size: 0.875rem; }
+
+.comment-edit-link {
+  display: none; }
 
 /* SETUP | GUI | 2721_SETUP | FLEX - 2018-12-14 */
 .flex {
@@ -4384,9 +4574,6 @@ p.entry-meta {
 	--------------------------------------------- */
   /* Author Box
 	--------------------------------------------- */
-  .author-box {
-    background-color: #f5f5f5;
-    padding: 30px; }
   /* After Entry
 	--------------------------------------------- */
   .after-entry {
@@ -4396,14 +4583,6 @@ p.entry-meta {
     padding-right: 30px; }
   /* Entry Misc.
 	--------------------------------------------- */
-  .after-entry,
-  .archive-description,
-  .author-box,
-  .comment-respond,
-  .entry,
-  .entry-comments,
-  .entry-pings {
-    margin-bottom: 60px; }
   /* Footer Widgets
 	--------------------------------------------- */
   .footer-widgets .wrap {
@@ -4695,7 +4874,7 @@ p.entry-meta {
 .entry-content .wp-block-cover .wp-block-cover-text {
   font-size: 48px; }
 
-/* SETUP | GUTTENBERG | 2721_SETUP | BLOCKQUOTES - 2019-01-17 */
+/* SETUP | GUTTENBERG | 2721_SETUP | BLOCKQUOTES - 2019-01-30 */
 .wp-block-quote, .entry-content .wp-block-quote, .wp-block-pullquote, .entry-content .wp-block-pullquote {
   margin: 1.5rem 1.5rem 2rem; }
 
@@ -4810,42 +4989,33 @@ p.entry-meta {
 .wp-block-pullquote[class*="align"] .wp-block-pullquote__citation {
   text-align: center; }
 
-/* SETUP | GUTTENBERG | 2721_SETUP | UNCATEGORIZED - 2019-01-04 */
-/* Buttons
----------------------------------------------------------------------------- */
-.content .wp-block-button .wp-block-button__link {
-  background-color: #333;
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  white-space: normal;
-  width: auto; }
+/* SETUP | GUTTENBERG | 2811_SETUP | BUTTONS - 2019-02-12 */
+.content .wp-block-button.button,
+.content .wp-block-button.button-tiny,
+.content .wp-block-button.button-xxxsml,
+.content .wp-block-button.button-xxsml,
+.content .wp-block-button.button-xsml,
+.content .wp-block-button.button-sml,
+.content .wp-block-button.button-med,
+.content .wp-block-button.button-lrg,
+.content .wp-block-button.button-xlrg,
+.content .wp-block-button.button-huge {
+  padding: 0; }
 
-.content .wp-block-button .wp-block-button__link:focus,
-.content .wp-block-button .wp-block-button__link:hover {
-  background-color: #0072e5;
-  color: #fff; }
-
-/* Button Variations */
 .content .wp-block-button.is-style-squared .wp-block-button__link {
   border-radius: 0; }
 
 .content .wp-block-button.is-style-outline .wp-block-button__link {
+  color: #147FC4;
   background-color: transparent;
-  border: 2px solid currentColor;
-  border-radius: 0;
-  padding: 13px 28px; }
+  border: 2px solid #147FC4;
+  border-radius: 0; }
 
-.content .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .content .wp-block-button.is-style-outline .wp-block-button__link:hover {
-  color: #0073e5; }
+  color: #eee;
+  background-color: #147FC4; }
 
+/* SETUP | GUTTENBERG | 2811_SETUP | UNCATEGORIZED - 2019-02-12 */
 /* Category Block
 ---------------------------------------------------------------------------- */
 .entry-content .wp-block-categories,
@@ -4904,7 +5074,7 @@ hr.wp-block-separator {
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
-/* SETUP | GUTTENBERG | 2721_SETUP | STYLEEDITOR - 2019-01-04 */
+/* SETUP | GUTTENBERG | 2811_SETUP | STYLEEDITOR - 2019-02-12 */
 /* Regular content width.
 /* 702px + 27px to match paragraph width on front-end and editor.
 ---------------------------------------------------------------------------- */
@@ -4923,9 +5093,6 @@ hr.wp-block-separator {
 
 /* Typography
 ---------------------------------------------------------------------------- */
-a {
-  color: #0073e5; }
-
 .editor-post-title__block .editor-post-title__input {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 30px;
@@ -5022,31 +5189,6 @@ hr.wp-block-separator.is-style-dots {
 
 /* Buttons
 ---------------------------------------------------------------------------- */
-.wp-block-button .wp-block-button__link {
-  background-color: #333;
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  line-height: 24px;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  white-space: normal;
-  width: auto; }
-
-.wp-block-button.is-style-squared .wp-block-button__link {
-  border-radius: 0; }
-
-.wp-block-button.is-style-outline .wp-block-button__link {
-  background-color: transparent;
-  border: 2px solid currentColor;
-  border-radius: 0;
-  padding: 13px 28px; }
-
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .wp-block-button.is-style-outline .wp-block-button__link:hover {
   color: #0073e5; }
