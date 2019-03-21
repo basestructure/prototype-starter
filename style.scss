@@ -1,4 +1,4 @@
-/* SETUP | SETUP-2811 | STYLE - 2019-02-21 6:28 PM */
+/* SETUP | SETUP-2811 | STYLE - 2019-03-20 3:47 PM */
 // 2.8.1.1
 // 2.8.0.1 A (Latest Commit)
 // GENESIS-SAMPLE 2.8.0
@@ -19,7 +19,7 @@
 @import 	"selector/2721_setup/boxsizing";
 @import 	"selector/2721_setup/clear";
 
-// -------------------------------------------------------------------- VARIABLES | 2019-02-12
+// -------------------------------------------------------------------- VARIABLES | 2019-03-08
 
 // WIDTH
 @import 	"variables/2721_setup/width-grid";
@@ -31,7 +31,7 @@
 // TYPOGRAPHY
 @import 	"variables/2721_setup/fontfamily";
 @import 	"variables/2721_setup/fontsize";
-@import 	"variables/2721_setup/fontweight";
+@import 	"variables/2811_setup/fontweight";
 @import 	"variables/2721_setup/lineheight";
 @import 	"variables/2721_setup/letterspacing";
 @import 	"variables/2811_setup/color";
@@ -46,16 +46,16 @@
 @import 	"genesis/genesis-sample-271/typographical-elements";		// GENESIS-SAMPLE 2.7.1
 
 
-// -------------------------------------------------------------------- CONTENT | 2019-02-11
+// -------------------------------------------------------------------- CONTENT | 2019-03-20
 @import 	"content/2721_setup/link";
 @import 	"content/2721_setup/body";
 @import 	"content/2721_setup/headline";
 @import 	"content/2721_setup/paragraph";
-@import 	"content/2721_setup/list";
-@import 	"content/2721_setup/title";
+@import 	"content/2811_setup/list";
+@import 	"content/2811_setup/title";
 @import 	"content/2811_setup/align";
 @import 	"content/2811_setup/button";
-@import 	"content/2721_setup/block";
+@import 	"content/2811_setup/block";
 
 // -------------------------------------------------------------------- TYPE | 2018-12-14
 @import 	"type/2721_setup/family";
@@ -63,8 +63,8 @@
 @import 	"type/2721_setup/weight";
 @import 	"type/2721_setup/height";
 
-// -------------------------------------------------------------------- SPACING | 2018-12-14
-@import 	"spacing/2721_setup/space";
+// -------------------------------------------------------------------- SPACING | 2019-03-20
+@import 	"spacing/2811_setup/space";
 @import 	"spacing/2721_setup/space-responsive";
 @import 	"spacing/2721_setup/spacein";
 @import 	"spacing/2721_setup/spacein-responsive";
@@ -935,8 +935,8 @@ p.entry-meta {
 // -------------------------------------------------------------------- CREDIT | 2018-12-14
 @import 	"credit/2721_setup/credit-swp_grid";
 
-// -------------------------------------------------------------------- LOOP | 2019-02-05
-@import 	"loop/2801_setup/entry";
+// -------------------------------------------------------------------- LOOP | 2019-03-04
+@import 	"loop/2811_setup/entry";
 @import 	"loop/2801_setup/entrytitle";
 @import 	"loop/2801_setup/entrymeta";
 @import 	"loop/2801_setup/entryimage";
@@ -957,12 +957,12 @@ p.entry-meta {
 
 // -------------------------------------------------------------------- GUTENBERG | 2019-02-12
 @import 	"gutenberg/2721_setup/typography";
-@import 	"gutenberg/2721_setup/columns";
+@import 	"gutenberg/2811_setup/columns";
 @import 	"gutenberg/2721_setup/images";
 @import 	"gutenberg/2721_setup/blockquotes";
 @import 	"gutenberg/2811_setup/buttons";
 @import 	"gutenberg/2811_setup/uncategorized";
 @import 	"gutenberg/2811_setup/styleeditor";
 
-// -------------------------------------------------------------------- GUIDE | 2019-01-21
-@import 	"guide/2721_setup/label";
+// -------------------------------------------------------------------- GUIDE | 2019-03-04
+@import 	"guide/2811_setup/label";

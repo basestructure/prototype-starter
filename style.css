@@ -1,4 +1,4 @@
-/* SETUP | SETUP-2811 | STYLE - 2019-02-21 6:28 PM */
+/* SETUP | SETUP-2811 | STYLE - 2019-03-20 3:47 PM */
 /*
 Theme Name: SETUP-2811
 Theme URI: https://setup-2811.basestructure.com/
@@ -194,7 +194,7 @@ summary {
 /* SETUP | VARIABLES | 2721_SETUP | RESPONSIVE-RANGE - 2018-12-14 */
 /* SETUP | VARIABLES | 2721_SETUP | FONTFAMILY - 2019-01-30 */
 /* SETUP | VARIABLES | 2721_SETUP | FONTSIZE - 2019-01-01 */
-/* SETUP | VARIABLES | 2721_SETUP | FONTWEIGHT - 2018-12-14 */
+/* SETUP | VARIABLES | 2811_SETUP | FONTWEIGHT - 2018-03-08 */
 /* SETUP | VARIABLES | 2721_SETUP | LINEHEIGHT - 2018-12-14 */
 /* SETUP | VARIABLES | 2721_SETUP | LETTERSPACING - 2018-12-14 */
 /* SETUP | VARIABLES | 2811_SETUP | COLOR - 2019-02-12 */
@@ -601,7 +601,7 @@ p {
   margin-top: 0;
   margin-bottom: 1.5rem; }
 
-/* SETUP | LIST | 2721_SETUP | LIST - 2019-01-30 */
+/* SETUP | LIST | 2811_SETUP | LIST - 2019-03-09 */
 li {
   list-style-type: none; }
 
@@ -618,8 +618,22 @@ ol, ul {
   margin: 0;
   padding: 0; }
 
-ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-content ul.no-liststyle > li {
+ol.list-no-style,
+ol.list-no-style.list-all > li, .entry-content ol.list-no-style,
+.entry-content ol.list-no-style.list-all li, ol.list-no-style-parent.list-parent > li, .entry-content ol.list-no-style.list-parent > li, ol.list-no-style-parent.list-child li li, .entry-content ol.list-no-style.list-child li li, ul.list-no-style,
+ul.list-no-style.list-all > li, .entry-content ul.list-no-style,
+.entry-content ul.list-no-style.list-all li, ul.list-no-style-parent.list-parent > li, .entry-content ul.list-no-style.list-parent > li, ul.list-no-style-parent.list-child li li, .entry-content ul.list-no-style.list-child li li {
   list-style-type: none; }
+
+ol.list-outside,
+.entry-content ol.list-outside, ul.list-outside,
+.entry-content ul.list-outside {
+  list-style-position: outside; }
+
+ol.list-inside,
+.entry-content ol.list-inside, ul.list-inside,
+.entry-content ul.list-inside {
+  list-style-position: inside; }
 
 .entry-content ol > li {
   list-style-type: decimal; }
@@ -640,7 +654,7 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
   margin-bottom: 0;
   margin-left: 1.5rem; }
 
-/* SETUP | CONTENT | 2721_SETUP | TITLE - 2019-01-01 */
+/* SETUP | CONTENT | 2811_SETUP | TITLE - 2019-02-22 */
 .entry-title {
   font-size: 3rem;
   font-weight: 600;
@@ -656,7 +670,8 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
 .entry-title a {
   text-decoration: none; }
 
-.widget-title {
+.widget-title,
+.widgettitle {
   font-size: 0.875rem; }
 
 .archive .entry-title, .category .entry-title, .tag .entry-title, .blog .entry-title, .search-results .entry-title {
@@ -674,7 +689,7 @@ ol.no-liststyle, .entry-content ol.no-liststyle > li, ul.no-liststyle, .entry-co
 .archive-title {
   font-size: 2.125rem; }
 
-/* SETUP | SELECTOR | 2811_SETUP | ALIGN - 2019-02-08 */
+/* SETUP | SELECTOR | 2811_SETUP | ALIGN - 2019-03-20 */
 .alignleft, img.alignleft {
   float: left; }
 
@@ -691,7 +706,7 @@ img.alignleft, .featured-content a.alignleft .entry-image {
 img.alignright, .featured-content a.alignright .entry-image {
   margin-left: 1.5rem; }
 
-.alignfull {
+.alignfull, .maxwidth {
   margin-left: calc(-100vw / 2 + 100% / 2);
   margin-right: calc(-100vw / 2 + 100% / 2);
   max-width: 100vw; }
@@ -707,16 +722,20 @@ img.alignright, .featured-content a.alignright .entry-image {
   width: 100%; }
 
 @media only screen and (min-width: 64rem) {
-  .alignwide {
+  .alignwide, .wp-block-video.alignwide,
+  .entry-content .wp-block-video.alignwide {
     margin-left: -128px;
     margin-right: -128px;
-    min-width: 64rem; } }
+    min-width: 64rem;
+    max-width: 64rem; } }
 
 @media only screen and (max-width: 63.9375rem) {
-  .alignwide {
+  .alignwide, .wp-block-video.alignwide,
+  .entry-content .wp-block-video.alignwide {
     margin-left: auto;
     margin-right: auto;
-    width: 100%; } }
+    width: 100%;
+    max-width: 64rem; } }
 
 @media only screen and (min-width: 64rem) {
   .content-sidebar .alignwide {
@@ -724,11 +743,58 @@ img.alignright, .featured-content a.alignright .entry-image {
     margin-right: auto;
     width: 100%;
     min-width: auto;
-    max-width: 48rem; } }
+    max-width: 64rem; } }
 
 @media only screen and (max-width: 63.9375rem) {
   .content-sidebar .alignwide {
-    max-width: 48rem; } }
+    max-width: 64rem; } }
+
+@media only screen and (min-width: 80rem) {
+  .alignwide.width-xlrg {
+    margin-left: -256px;
+    margin-right: -256px;
+    min-width: 80rem;
+    max-width: 80rem; } }
+
+@media only screen and (max-width: 79.9375rem) {
+  .alignwide.width-xlrg {
+    min-width: none; } }
+
+@media only screen and (min-width: 80rem) {
+  .content-sidebar .alignwide.width-xlrg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-width: auto;
+    max-width: 80rem; } }
+
+@media only screen and (max-width: 79.9375rem) {
+  .content-sidebar .alignwide.width-xlrg {
+    max-width: 80rem; } }
+
+@media only screen and (min-width: 64rem) {
+  .alignwide.width-lrg {
+    margin-left: -128px;
+    margin-right: -128px;
+    min-width: 64rem;
+    max-width: 64rem; } }
+
+@media only screen and (max-width: 63.9375rem) {
+  .alignwide.width-lrg {
+    max-width: 64rem; } }
+
+@media only screen and (min-width: 64rem) {
+  .content-sidebar .alignwide.width-lrg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-width: auto;
+    max-width: 64rem; } }
+
+@media only screen and (max-width: 63.9375rem) {
+  .content-sidebar .alignwide.width-lrg {
+    min-width: none;
+    max-width: 64rem; } }
 
 @media only screen and (min-width: 64rem) {
   .alignwide.width-med {
@@ -741,7 +807,7 @@ img.alignright, .featured-content a.alignright .entry-image {
   .alignwide.width-med {
     max-width: 48rem; } }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 63.9375rem) {
   .content-sidebar .alignwide.width-med {
     min-width: auto;
     max-width: 48rem; } }
@@ -757,7 +823,7 @@ img.alignright, .featured-content a.alignright .entry-image {
   .alignwide.width-sml {
     max-width: 32rem; } }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 63.9375rem) {
   .content-sidebar .alignwide.width-sml {
     min-width: auto;
     max-width: 32rem; } }
@@ -773,7 +839,7 @@ img.alignright, .featured-content a.alignright .entry-image {
   .alignwide.width-xsml {
     max-width: 26.563rem; } }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 63.9375rem) {
   .content-sidebar .alignwide.width-xsml {
     min-width: auto;
     max-width: 26.563rem; } }
@@ -964,19 +1030,7 @@ a.button-red:hover {
   color: #cc0000;
   background-color: #f5f5f5; }
 
-/* SETUP | CONTENT | 2721_SETUP | BLOCK - 2018-12-14 */
-.wp-block-cover.space-zero-bottom {
-  margin-bottom: 0; }
-
-.wp-block-columns.space-zero {
-  margin: 0; }
-
-.wp-block-columns.spacein-zero, .entry-content .wp-block-columns.alignfull.spacein-zero {
-  padding: 0; }
-
-.wp-block-columns.space-zero .wp-block-column {
-  margin: 0; }
-
+/* SETUP | CONTENT | 2811_SETUP | BLOCK - 2019-03-20 */
 /* SETUP | TYPE | 2721_SETUP | FAMILY - 2018-12-14 */
 .fontfamily-body {
   font-family: "Source Sans Pro", sans-serif; }
@@ -1016,7 +1070,7 @@ dl, p.has-regular-font-size {
 .fontsize-tinier, .content .wp-block-button.fontsize-tinier .wp-block-button__link {
   font-size: 0.625rem; }
 
-.fontsize-tiny, .entry-content p.has-tiny-font-size, .content .wp-block-button.fontsize-tiny .wp-block-button__link, p.has-tiny-font-size {
+.fontsize-tiny, .entry-content p.has-tiny-font-size, .content .wp-block-button.fontsize-tiny .wp-block-button__link, p.has-tiny-font-size, .guide-label.fontsize-tiny, .guide-label2.fontsize-tiny {
   font-size: 0.75rem;
   line-height: 1.4; }
 
@@ -1201,7 +1255,7 @@ dl {
 .lineheight-double {
   line-height: 2; }
 
-/* SETUP | SPACING | 2721_SETUP | SPACE - 2018-12-14 */
+/* SETUP | SPACING | 2811_SETUP | SPACE - 2019-03-20 */
 p.space-top, .space, .space-y, .space-top, .space-bottomless {
   margin-top: 1rem; }
 
@@ -1267,7 +1321,9 @@ p.space-bottom, .space, .space-y, .space-bottom, .space-topless {
 
 p.space-zero-bottom, ol.space-zero-bottom,
 .entry-content ol.space-zero-bottom, ul.space-zero-bottom,
-.entry-content ul.space-zero-bottom, .space-zero, .space-zero-y, .space-zero-bottom, .entry-content .wp-block-columns.space-zero-bottom, .entry-content .wp-block-columns.space-zero-bottom-blockcolumn .wp-block-column, .entry-content .wp-block-columns.column-zero-bottom .wp-block-column {
+.entry-content ul.space-zero-bottom, .wp-block-columns.space-zero-bottom, .wp-block-columns .wp-block-column.space-zero-bottom,
+.entry-content .wp-block-columns .wp-block-column.space-zero-bottom, .wp-block-image.space-zero-bottom, .wp-block-video.space-zero-bottom,
+.entry-content .wp-block-columns.space-zero-bottom, .space-zero, .space-zero-y, .space-zero-bottom, .entry-content .wp-block-columns.space-zero-bottom-blockcolumn .wp-block-column, .entry-content .wp-block-columns.column-zero-bottom .wp-block-column {
   margin-bottom: 0; }
 
 p.space-left, .space, .space-x, .space-left, .space-topless, .space-bottomless {
@@ -1335,6 +1391,14 @@ p.space-right, .space, .space-x, .space-right, .space-topless, .space-bottomless
 
 .space-zero, .space-zero-x, .space-zero-right {
   margin-right: 0; }
+
+.wp-block-columns.space-zero, .entry-content .wp-block-columns.alignfull.space-zero, .wp-block-columns.spacein-zero .wp-block-column, .wp-block-columns.columns-all-space-zero,
+.wp-block-columns.columns-all-space-zero .wp-block-column,
+.entry-content .wp-block-columns.columns-all-space-zero,
+.entry-content .wp-block-columns.columns-all-space-zero .wp-block-column,
+.wp-block-columns.columns-all-space-zero .wp-block-columns,
+.entry-content .wp-block-columns.columns-all-space-zero .wp-block-columns {
+  margin: 0; }
 
 /* SETUP | SPACING | 2721_SETUP | SPACE - 2018-12-14 */
 @media only screen and (max-width: 48rem) {
@@ -4169,17 +4233,17 @@ img.alignright,
 .siteby a:hover {
   text-decoration: none; }
 
-/* SETUP | LOOP | 2801_SETUP | ENTRY - 2019-02-04 */
+/* SETUP | LOOP | 2811_SETUP | ENTRY - 2019-03-04 */
 .single .content .entry {
   margin-bottom: 3rem; }
 
 .archive .entry {
-  background-color: #f3f3f3;
+  background-color: #f9f9f9;
   padding: 1.5rem;
   margin-bottom: 2rem; }
 
 .featured-content .entry {
-  background-color: #f3f3f3;
+  background-color: #f9f9f9;
   padding: 1.5rem;
   margin-bottom: 1rem; }
 
@@ -4721,7 +4785,7 @@ img.alignright,
 .entry-content p.has-background.light-text a:hover {
   text-decoration: none; }
 
-/* SETUP | GUTTENBERG | 2721_SETUP | COLUMNS - 2019-01-17 */
+/* SETUP | GUTTENBERG | 2811_SETUP | COLUMNS - 2019-03-19 */
 .entry-content .wp-block-columns {
   display: block; }
   @media only screen and (min-width: 48rem) {
@@ -4733,6 +4797,12 @@ img.alignright,
     flex: 1;
     margin-right: 0.75rem;
     margin-left: 0.75rem;
+    margin-bottom: 1.5rem; } }
+
+@media only screen and (max-width: 47.9375rem) {
+  .entry-content .wp-block-columns .wp-block-column {
+    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 1.5rem; } }
 
 @media only screen and (min-width: 48rem) {
@@ -4834,7 +4904,7 @@ img.alignright,
   .entry-content .wp-block-columns.gap-zero-edge .wp-block-column:last-child {
     margin-right: 0; } }
 
-/* SETUP | GUTTENBERG | 2721_SETUP | IMAGES - 2019-01-17 */
+/* SETUP | GUTTENBERG | 2721_SETUP | IMAGES - 2019-03-12 */
 @media only screen and (min-width: 64rem) {
   .entry-content .wp-block-image.alignwide {
     min-width: 64rem;
@@ -4865,6 +4935,12 @@ img.alignright,
 .wp-block-embed.alignwide,
 .wp-block-embed.alignfull {
   margin-bottom: 1.5rem; }
+
+.wp-block-image.alignwide.space-zero-bottom,
+.wp-block-image.alignfull.space-zero-bottom,
+.wp-block-embed.alignwide.space-zero-bottom,
+.wp-block-embed.alignfull.space-zero-bottom {
+  margin-bottom: 0; }
 
 /* Cover Image
 ---------------------------------------------------------------------------- */
@@ -5233,7 +5309,7 @@ hr.wp-block-separator.is-style-dots {
 .wp-block[data-align="full"] .wp-block-columns > .editor-inner-blocks {
   padding: 0 30px; }
 
-/* SETUP | GUIDE | 2721_SETUP | LABEL - 2018-01-21 */
+/* SETUP | GUIDE | 2811_SETUP | LABEL - 2018-03-04 */
 .guide-label.indent, .guide-line.indent, .guide-summary.indent, .guide-box.indent {
   margin-left: 2rem; }
 
@@ -5244,6 +5320,14 @@ p.guide-label.has-background, .guide-label.end {
   padding: 5px 10px;
   color: white;
   background-color: #e5565d;
+  display: block; }
+
+.guide-label2 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  color: #999;
+  background-color: #f0f0f0;
   display: block; }
 
 .guide-label.sub {
