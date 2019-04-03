@@ -1,3 +1,4 @@
+/* SETUP | /LIB/GUTENBERG | 2911_SETUP | FRONT-END.CSS - 2019-04-02 */
 /* Drop Caps
 ---------------------------------------------------------------------------- */
 
@@ -420,9 +421,9 @@ hr.wp-block-separator {
 @media only screen and (min-width: 960px) {
 
 	.full-width-content .site-container .alignwide {
-		margin-left: -180px;
-		margin-right: -180px;
-		max-width: 1062px;
+		margin-left: -128px;
+		margin-right: -128px;
+		max-width: 1024px;
 		width: auto;
 	}
 

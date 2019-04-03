@@ -1,4 +1,5 @@
 <?php
+/* SETUP | /CONFIG | 2911_SETUP | BLOCK-EDITOR-SETTINGS.PHP - 2019-04-02 */
 /**
  * Block Editor settings specific to Genesis Sample.
  *
@@ -14,7 +15,7 @@ $genesis_sample_link_color_brightness = genesis_sample_color_brightness( $genesi
 
 return array(
 	'admin-fonts-url'              => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
-	'content-width'                => 1062,
+	'content-width'                => 1024,
 	'default-button-bg'            => $genesis_sample_link_color,
 	'default-button-color'         => $genesis_sample_link_color_contrast,
 	'default-button-outline-hover' => $genesis_sample_link_color_brightness,
@@ -30,27 +31,102 @@ return array(
 			'slug'  => 'theme-secondary',
 			'color' => get_theme_mod( 'genesis_sample_accent_color', genesis_sample_customizer_get_default_accent_color() ),
 		),
+		array(
+			'name'  => __( 'White', 'setup-2801' ),
+			'slug'  => 'white',
+			'color' => '#ffffff',
+		),
+		array(
+			'name'  => __( 'Light gray', 'setup-2801' ),
+			'slug'  => 'light-gray',
+			'color' => '#f5f5f5',
+		),
+		array(
+			'name'  => __( 'Medium gray', 'setup-2801' ),
+			'slug'  => 'medium-gray',
+			'color' => '#999',
+		),
+		array(
+			'name'  => __( 'Dark gray', 'setup-2801' ),
+			'slug'  => 'dark-gray',
+			'color' => '#333',
+		),
+		array(
+			'name'  => __( 'Black', 'setup-2801' ),
+			'slug'  => 'black',
+			'color' => '#000000',
+		),
+		array(
+			'name'  => __( 'Red', 'setup-2801' ),
+			'slug'  => 'red',
+			'color' => '#cc0000',
+		),
+		array(
+			'name'  => __( 'Orange', 'setup-2801' ),
+			'slug'  => 'orange',
+			'color' => '#ff7b00',
+		),
+		array(
+			'name'  => __( 'Yellow', 'setup-2801' ),
+			'slug'  => 'yellow',
+			'color' => '#ffbb00',
+		),
+		array(
+			'name'  => __( 'Green', 'setup-2801' ),
+			'slug'  => 'green',
+			'color' => '#66cc00',
+		),
+		array(
+			'name'  => __( 'Violet', 'setup-2801' ),
+			'slug'  => 'violet',
+			'color' => '#b882ee',
+		),
+		array(
+			'name'  => __( 'Blue', 'setup-2801' ),
+			'slug'  => 'blue',
+			'color' => '#0066cc',
+		),
 	),
 	'editor-font-sizes'            => array(
 		array(
-			'name' => __( 'Small', 'genesis-sample' ),
-			'size' => 12,
-			'slug' => 'small',
+			'name'      => __( 'Tiny', 'setup-2801' ),
+			'size'      => 12,
+			'slug'      => 'tiny',
 		),
 		array(
-			'name' => __( 'Normal', 'genesis-sample' ),
-			'size' => 18,
-			'slug' => 'normal',
+			'name'      => __( 'XXXSmall', 'setup-2801' ),
+			'size'      => 14,
+			'slug'      => 'xxxsmall',
 		),
 		array(
-			'name' => __( 'Large', 'genesis-sample' ),
-			'size' => 20,
-			'slug' => 'large',
+			'name'      => __( 'XXSmall', 'setup-2801' ),
+			'size'      => 16,
+			'slug'      => 'xxsmall',
 		),
 		array(
-			'name' => __( 'Larger', 'genesis-sample' ),
-			'size' => 24,
-			'slug' => 'larger',
+			'name'      => __( 'XSmall', 'setup-2801' ),
+			'size'      => 20,
+			'slug'      => 'xsmall',
+		),
+		array(
+			'name'      => __( 'Small', 'setup-2801' ),
+			'size'      => 24,
+			'slug'      => 'small',
+		),
+		array(
+			'name'      => __( 'Medium', 'setup-2801' ),
+			'size'      => 34,
+			'slug'      => 'medium',
+		),
+		array(
+			'name'      => __( 'Large', 'setup-2801' ),
+			'size'      => 48,
+			'slug'      => 'large',
+		),
+		array(
+			'name'      => __( 'XLarge', 'setup-2801' ),
+			'size'      => 64,
+			'slug'      => 'xlarge',
 		),
 	),
 );

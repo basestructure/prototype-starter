@@ -1,8 +1,8 @@
 <?php
 /**
- * SETUP-2811
+ * SETUP-2911
  *
- * This file adds functions to the Genesis Theme SETUP-2811.
+ * This file adds functions to the Genesis Theme SETUP-2911.
  *
  * @package SETUP-2811
  * @author  StudioPress
@@ -13,10 +13,9 @@
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
 
-// Defines the child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'SETUP-2811' );
-define( 'CHILD_THEME_URL', 'https://setup-2811.basestructure.com/' );
-define( 'CHILD_THEME_VERSION', '2.8.1.1' );
+// Defines constants to help enqueue scripts and styles.
+define( 'CHILD_THEME_HANDLE', sanitize_title_with_dashes( wp_get_theme()->get( 'Name' ) ) );
+define( 'CHILD_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
@@ -210,7 +209,7 @@ function genesis_sample_comments_gravatar( $args ) {
 }
 
 // ------------------------------------------------------------------------
-// CREDITS
+// SETUP-2911 - CREDITS
 
 //* Add the credits section on the site footer
 remove_action( 'genesis_footer', 'genesis_do_footer' );
