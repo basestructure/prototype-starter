@@ -4,7 +4,7 @@
  *
  * This file adds functions to the Genesis Theme SETUP-2911.
  *
- * @package SETUP-2811
+ * @package SETUP-2911
  * @author  StudioPress
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/

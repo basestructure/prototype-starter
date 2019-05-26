@@ -1,4 +1,4 @@
-/* SETUP | SETUP-2911 | STYLE - 2019-04-02 1:23 PM */
+/* SETUP | SETUP-2911 | STYLE - 2019-05-25 3:55 PM */
 // 2.9.1.1_A
 // GENESIS-SAMPLE 2.9.1
 // 2.8.1.1_A
@@ -16,9 +16,10 @@
 @import 	"neat";
 @import 	"grid/2911_setup/neat";
 
-// -------------------------------------------------------------------- SELECTORS | 2019-04-02
+// -------------------------------------------------------------------- SELECTORS | 2019-04-17
 @import 	"selector/2911_setup/boxsizing";
 @import 	"selector/2911_setup/clear";
+@import 	"selector/2911_setup/display";
 
 // -------------------------------------------------------------------- VARIABLES | 2019-04-02
 
@@ -40,8 +41,12 @@
 // -------------------------------------------------------------------- COLOR | 2019-04-02
 @import 	"color/2911_setup/color";
 @import 	"color/2911_setup/bgcolor";
-@import 	"color/2911_setup/tint";
-@import 	"color/2911_setup/fade";
+
+// -------------------------------------------------------------------- EFFECT | 2019-04-02
+@import 	"effect/2911_setup/tint";
+@import 	"effect/2911_setup/fade";
+@import 	"effect/2911_setup/shadow";
+@import 	"effect/2911_setup/shade";
 
 
 @import 	"genesis/genesis-sample-271/typographical-elements";		// GENESIS-SAMPLE 2.7.1
@@ -99,8 +104,9 @@
 @import 	"genesis/genesis-sample-291/site-footer";					// GENESIS-SAMPLE 2.9.1
 
 
-// -------------------------------------------------------------------- HEADER | 2019-04-02
-@import 	"header/2911_setup/header-logomenuv_grid";
+// -------------------------------------------------------------------- HEADER | 2019-04-04
+//@import 	"header/2911_setup/header-topdown-centered_flex";
+@import 	"header/2911_setup/header-leftright-line_flex";
 
 // -------------------------------------------------------------------- INNER | 2019-04-02
 @import 	"inner/2911_setup/inner_grid";
@@ -145,3 +151,6 @@
 
 // -------------------------------------------------------------------- GUIDE | 2019-04-02
 @import 	"guide/2911_setup/label";
+//@import 	"guide/260_setupbasic/header";
+//@import 	"guide/260_setupbasic/inner";
+//@import 	"guide/260_setupbasic/footer";
