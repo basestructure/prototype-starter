@@ -1,3 +1,4 @@
+/* SETUP | PROTOTYPE-STARTER | STYLE - 2019-06-01 3:57 AM */
 /* SETUP | SETUP-2911 | STYLE - 2019-05-27 1:29 AM */
 // 2.9.1.1_B
 // 2.9.1.1_A
@@ -34,7 +35,7 @@
 
 // TYPOGRAPHY
 @import 	"variables/2911_setup/fontfamily";
-@import 	"variables/2911_setup/fontsize";
+			@import 	"variables/2911_prototype-starter/fontsize";
 @import 	"variables/2911_setup/fontweight";
 @import 	"variables/2911_setup/lineheight";
 @import 	"variables/2911_setup/letterspacing";
@@ -109,7 +110,8 @@
 
 // -------------------------------------------------------------------- HEADER | 2019-04-04
 //@import 	"header/2911_setup/header-topdown-centered_flex";
-@import 	"header/2911_setup/header-leftright-line_flex";
+//@import 	"header/2911_setup/header-leftright-line_flex";
+			@import 	"header/2911_prototype-starter/header-topdown-type-starter_flex";
 
 // -------------------------------------------------------------------- INNER | 2019-04-02
 @import 	"inner/2911_setup/inner_grid";
