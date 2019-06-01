@@ -1,4 +1,5 @@
-/* SETUP | SETUP-2911 | STYLE - 2019-05-25 3:55 PM */
+/* SETUP | SETUP-2911 | STYLE - 2019-05-27 1:29 AM */
+// 2.9.1.1_B
 // 2.9.1.1_A
 // GENESIS-SAMPLE 2.9.1
 // 2.8.1.1_A
@@ -21,13 +22,14 @@
 @import 	"selector/2911_setup/clear";
 @import 	"selector/2911_setup/display";
 
-// -------------------------------------------------------------------- VARIABLES | 2019-04-02
+// -------------------------------------------------------------------- VARIABLES | 2019-05-27
 
 // WIDTH
 @import 	"variables/2911_setup/width-grid";
 @import 	"variables/2911_setup/width-layout";
 @import 	"variables/2911_setup/width-range";
 @import 	"variables/2911_setup/width-space";
+@import 	"variables/2911_setup/width-line";
 @import 	"variables/2911_setup/responsive-range";
 
 // TYPOGRAPHY
@@ -52,7 +54,7 @@
 @import 	"genesis/genesis-sample-271/typographical-elements";		// GENESIS-SAMPLE 2.7.1
 
 
-// -------------------------------------------------------------------- CONTENT | 2019-04-02
+// -------------------------------------------------------------------- CONTENT | 2019-05-27
 @import 	"content/2911_setup/link";
 @import 	"content/2911_setup/body";
 @import 	"content/2911_setup/headline";
@@ -63,6 +65,7 @@
 @import 	"content/2911_setup/button";
 @import 	"content/2911_setup/fullwidth";
 @import 	"content/2911_setup/block";
+@import 	"content/2911_setup/border";
 
 // -------------------------------------------------------------------- TYPE | 2019-04-02
 @import 	"type/2911_setup/family";
